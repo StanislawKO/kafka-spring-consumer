@@ -52,7 +52,7 @@ public class ApplicationConfig {
         var props = kafkaProperties.buildConsumerProperties(sslBundles.getIfAvailable());
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, JsonDeserializer.class);
-        props.put(TYPE_MAPPINGS, "com.example.kafkaspringconsumer.model.StringValue:com.example.kafkaspringconsumer.model.StringValue");
+        props.put(TYPE_MAPPINGS, "com.example.kafkaspringproducer.model.StringValue:com.example.kafkaspringconsumer.model.StringValue");
         props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 3);
         props.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 3_000);
 
